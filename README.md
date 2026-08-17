@@ -1,271 +1,228 @@
 # Climatic Variability, Aridity and Drought Regime Changes in Southeastern Türkiye
 
-## A NASA POWER-Based Hydroclimatological Assessment (1991–2025)
+### A NASA POWER-Based Hydroclimatological Assessment (1991–2025)
 
 **Author: Ahmet Solmaz**
 
 ---
 
-## Abstract
+## About the Study
 
-This study investigates climatic variability, aridity, drought dynamics, and hydroclimatic regime changes across nine provinces of Southeastern Türkiye during **1991–2025**.
+This study investigates **climatic variability, aridity intensification, drought characteristics, and hydroclimatic regime changes in Southeastern Türkiye**.
 
-The study uses daily meteorological data from the **NASA Prediction of Worldwide Energy Resources (NASA POWER)** database and applies a multi-method hydroclimatological framework including **Mann–Kendall, Sen's slope, Pettitt, PELT, OLS-CUSUM, Cohen's *d*, SPI-12, SPEI-12, Thornthwaite PET, De Martonne, UNEP P/PET, drought-event analysis, and Consecutive Dry Days (CDD)**.
-
-The results indicate a coherent warming signal, increasing evaporative demand, progressive aridification, increasing dry-spell persistence, and an increasing contribution of temperature and evaporative demand to drought conditions.
-
----
-
-# 1. Study Area and Data
-
-The study covers nine provinces in Southeastern Türkiye:
+The analysis covers nine provinces:
 
 **Diyarbakır · Batman · Siirt · Kilis · Gaziantep · Şanlıurfa · Adıyaman · Şırnak · Mardin**
 
-### Data Source
+The study was conducted to determine whether the regional climate has experienced **persistent warming, increasing atmospheric dryness, longer dry periods, and a transition toward temperature-driven drought conditions**.
 
-**NASA POWER**
-
-### Period
-
-**1991–2025**
-
-### Temporal Resolution
-
-**Daily → Monthly → Annual**
-
-### Main Variables
-
-| Variable | Parameter | Unit |
-|---|---|---|
-| Air Temperature | T2M | °C |
-| Precipitation | PRECTOTCORR | mm/day |
-
-Potential evapotranspiration was estimated using the **Thornthwaite method**.
+Daily NASA POWER data for **1991–2025** were analysed using R.
 
 ---
 
-# 2. Research Questions
+# Main Results
 
-The study addresses four main questions:
+The results indicate a clear hydroclimatic transformation across Southeastern Türkiye:
 
-1. Has temperature significantly increased across Southeastern Türkiye?
-2. Have climatic aridity and atmospheric evaporative demand changed?
-3. Has the frequency, duration, and severity of drought changed?
-4. Are recent drought conditions increasingly influenced by temperature and evaporative demand?
+* 🌡️ **Persistent warming** was detected across the study region.
+* 💧 **Potential evapotranspiration increased**, indicating increasing atmospheric evaporative demand.
+* 🌵 **Aridity intensified** according to both De Martonne and UNEP indices.
+* ☀️ **Consecutive dry-day periods increased** in several provinces.
+* 📉 **SPEI-12 identified stronger drought signals than SPI-12**, indicating an increasing influence of temperature and evaporative demand.
+* 🔄 Several provinces experienced **clear climatic regime shifts**.
+* 🌧️ Precipitation showed high interannual variability, while its long-term signal was generally weaker than the temperature and PET signals.
+* 📊 Effect-size analysis confirmed that several regime changes were not only statistically detectable but also physically meaningful.
+
+Overall, the findings indicate a transition toward a **warmer, drier and more temperature-sensitive hydroclimatic regime**.
 
 ---
 
-# 3. Core Results
+# Visual Results
 
-## 3.1 Temperature Change
+## Temperature Trends
 
-A statistically significant warming signal was detected across the analysed provinces.
+![Temperature Trends](Academic_Trend_T2M_9Cities.png)
 
-Mann–Kendall and Sen's slope analyses were used to quantify long-term warming, while Pettitt and PELT analyses were used to identify structural temperature changes.
-
-### Temperature Trend
-
-![Temperature Trend](Academic_Trend_T2M_9Cities.png)
-
-### Temperature Regime Shift
+## Temperature Regime Shifts
 
 ![Temperature Regime Shift](Academic_Regime_Shift_T2M.png)
 
-### Temperature Time Series
+![Temperature Regime Shift Time Series](Academic_Regime_Shift_T2M_Time_Series.png)
 
-![Temperature Time Series](Academic_Regime_Shift_T2M_Time_Series.png)
-
-### Percentage Change Between Regimes
-
-![Temperature Regime Percentage Change](Academic_Regime_Shift_Percentage_Bar.png)
-
-**Main finding:** The region exhibits a persistent warming tendency accompanied by a shift toward warmer post-break conditions.
+![Regime Shift Percentage](Academic_Regime_Shift_Percentage_Bar.png)
 
 ---
 
-## 3.2 Precipitation Variability
+## Precipitation Trends and Regime Changes
 
-Precipitation displays substantial interannual variability and weaker spatial coherence than temperature.
-
-### Precipitation Trend
-
-![Precipitation Trend](Academic_Trend_Precip_9Cities.png)
-
-### Precipitation Regime Shift
+![Precipitation Trends](Academic_Trend_Precip_9Cities.png)
 
 ![Precipitation Regime Shift](Academic_Regime_Shift_Precip.png)
 
-**Main finding:** Regional hydroclimatic drying cannot be explained by precipitation decline alone.
-
 ---
 
-## 3.3 Aridity and Potential Evapotranspiration
-
-Potential evapotranspiration was estimated using the Thornthwaite method.
-
-Aridity was evaluated using:
-
-- De Martonne Aridity Index
-- UNEP P/PET Aridity Index
-
-### De Martonne Aridity
+## Aridity
 
 ![De Martonne Aridity](Academic_Aridity_DeMartonne_9Cities.png)
 
-### UNEP P/PET Aridity
-
 ![UNEP Aridity](Academic_Aridity_UNEP_PPET_9Cities.png)
 
-**Main finding:** Increasing evaporative demand contributes substantially to the observed hydroclimatic drying and aridification.
+The aridity results indicate a progressive increase in atmospheric dryness, primarily associated with increasing evaporative demand.
 
 ---
 
-## 3.4 Drought Regime
-
-Long-term drought conditions were assessed using:
-
-- **SPI-12** — precipitation-based drought
-- **SPEI-12** — precipitation + evaporative-demand drought
-
-### SPEI-12 Drought Conditions
-
-![SPEI-12 Drought](Academic_Drought_SPEI12_Bars_9Cities.png)
-
-### SPI-12 vs SPEI-12
-
-![SPI-12 vs SPEI-12](Academic_Drought_SPI12_vs_SPEI12_9Cities.png)
-
-**Main finding:** SPEI-12 identifies additional drought stress associated with increasing atmospheric evaporative demand.
-
----
-
-## 3.5 Drought Frequency, Duration and Severity
-
-Drought events were identified using run-theory analysis.
-
-The analysis considers:
-
-- Frequency
-- Duration
-- Severity
-- Intensity
-
-### Drought Frequency
+## Drought Regime
 
 ![Drought Frequency](Academic_Drought_Events_Frequency.png)
 
-### Drought Duration vs Severity
+![Drought Duration and Severity](Academic_Drought_Duration_vs_Severity.png)
 
-![Drought Duration vs Severity](Academic_Drought_Duration_vs_Severity.png)
+![SPEI-12 Drought](Academic_Drought_SPEI12_Bars_9Cities.png)
 
-**Main finding:** Longer drought events are associated with greater cumulative drought severity, highlighting the importance of drought persistence.
+![SPI-12 vs SPEI-12](Academic_Drought_SPI12_vs_SPEI12_9Cities.png)
+
+The comparison between SPI-12 and SPEI-12 demonstrates the increasing importance of **temperature and atmospheric water demand** in drought development.
 
 ---
 
-## 3.6 Consecutive Dry Days
-
-Dry-spell persistence was evaluated using **Consecutive Dry Days (CDD)**.
-
-A dry day was defined as:
-
-**PR < 1.0 mm/day**
-
-### Annual CDD
+## Consecutive Dry Days
 
 ![Annual CDD](Academic_DrySpell_Annual_CDD_9Cities.png)
 
-### Seasonal CDD
-
 ![Seasonal CDD](Academic_DrySpell_Seasonal_CDD_9Cities.png)
 
-**Main finding:** Dry-spell persistence shows an increasing tendency across a substantial part of the study region.
+The CDD analysis shows increasing dry-spell persistence, particularly during the warmer seasons.
 
 ---
 
-## 3.7 Trend Magnitude and Effect Size
+## Effect Size and Climate Change Magnitude
 
-Sen's slope was used to estimate decadal trend magnitudes.
+![Cohen's d Effect Size](Academic_Effect_Size_Cohen_ForestPlot.png)
 
-Cohen's *d* was used to quantify the magnitude of differences between pre- and post-regime periods.
+![Sen's Slope Decadal Rates](Academic_Sens_Slope_Decadal_Rates.png)
 
-### Sen's Slope
-
-![Sen's Slope](Academic_Sens_Slope_Decadal_Rates.png)
-
-### Cohen's *d*
-
-![Cohen's d](Academic_Effect_Size_Cohen_ForestPlot.png)
-
-**Main finding:** Several detected regime differences are not only statistically significant but also substantial in magnitude.
+Effect-size analysis provides an additional interpretation of the magnitude of observed climatic regime changes.
 
 ---
 
-## 3.8 Climate–Drought Relationships
+## Climate–Drought Relationships
 
-Pearson and Spearman correlations were used to investigate relationships among climatic variables and drought indices.
-
-The main relationships examined were:
-
-- Precipitation ↔ SPI-12
-- Temperature ↔ SPEI-12
-- PET ↔ SPEI-12
-
-### Correlation Analysis
-
-![Climate-Drought Correlations](Academic_Correlations_BarPlot_9Cities.png)
-
-### PET vs SPEI-12
+![Correlation Analysis](Academic_Correlations_BarPlot_9Cities.png)
 
 ![PET vs SPEI-12](Academic_Scatter_PET_vs_SPEI12_9Cities.png)
 
-### Precipitation vs SPI-12
-
 ![Precipitation vs SPI-12](Academic_Scatter_Prec_vs_SPI12_9Cities.png)
 
-**Main finding:** Temperature and PET show an important negative relationship with SPEI-12, supporting the increasing role of atmospheric evaporative demand in drought development.
+The relationships demonstrate strong precipitation–SPI coupling and a clear negative relationship between temperature/PET and SPEI-12.
 
 ---
 
-# 4. Methodological Framework
+# Methodological Framework
 
-| Research Component | Method |
-|---|---|
-| Climate variability | Descriptive statistics |
-| Trend detection | Mann–Kendall |
-| Trend magnitude | Sen's slope |
-| Change-point detection | Pettitt |
-| Multiple change points | PELT |
-| Structural stability | OLS-CUSUM |
-| PET | Thornthwaite |
-| Aridity | De Martonne |
-| Aridity | UNEP P/PET |
-| Drought | SPI-12 |
-| Drought | SPEI-12 |
-| Drought events | Run theory |
-| Dry spells | CDD |
-| Effect size | Cohen's *d* |
-| Correlation | Pearson + Spearman |
+The study combines:
 
-All analyses were implemented in **R**.
+* Mann–Kendall trend test
+* Sen's slope estimator
+* Pettitt change-point test
+* PELT change-point analysis
+* OLS-CUSUM
+* Cohen's *d* effect size
+* SPI-12
+* SPEI-12
+* ETCCDI Consecutive Dry Days (CDD)
+* Thornthwaite PET
+* De Martonne Aridity Index
+* UNEP P/PET Aridity Index
+* Pearson correlation
+* Spearman correlation
+* Run-theory drought event analysis
+
+All analyses were performed in **R** using reproducible scripts.
 
 ---
 
-# 5. Integrated Hydroclimatic Interpretation
+# Excel Results
 
-The combined evidence indicates a regional hydroclimatic transformation characterized by:
+Detailed numerical results are provided as Excel workbooks:
+
+* [Aridity Analysis](Aridity_Analysis_9Cities.xlsx)
+* [Drought Event Statistics](Drought_Event_Statistics_9Cities.xlsx)
+* [SPI–SPEI Drought Analysis](Drought_Analysis_SPI_SPEI_All9Cities.xlsx)
+* [Dry Spell Analysis](Dry_Spell_Analysis_9Cities.xlsx)
+* [Climate Regime Shift Analysis](Climate_Regime_Shift_Analysis_9Cities.xlsx)
+* [Climate Effect Size Analysis](Climate_Effect_Size_Analysis_9Cities.xlsx)
+* [Climate–Drought Relationships](Climate_Drought_Relationships_9Cities.xlsx)
+* [Hydroclimatic Trend Analysis](Hydroclimatic_Trend_Analysis_Results.xlsx)
+* [Regional Regime Shift Analysis](Regional_Regime_Shift_Analysis_9Cities.xlsx)
+* [Regional Trend Analysis](Regional_Trend_Analysis_9Cities.xlsx)
+
+These files contain the **statistical test results, trend estimates, change points, drought-event statistics, aridity calculations, correlations and regional results**.
+
+---
+
+# Data
+
+**Source:** NASA POWER Agroclimatology Community
+
+**Period:** 1 January 1991 – 31 December 2025
+
+**Temporal resolution:** Daily
+
+**Main variables:**
+
+* Air temperature (T2M)
+* Precipitation (PRECTOTCORR)
+
+Daily observations were aggregated to monthly and annual scales where appropriate.
+
+---
+
+# Repository Structure
 
 ```text
-Warming
-   ↓
-Increasing PET
-   ↓
-Increasing Atmospheric Water Demand
-   ↓
-Increasing Aridity
-   ↓
-Longer Dry Spells
-   ↓
-Increasing Temperature-Sensitive Drought
-   ↓
-Hydroclimatic Regime Change
+├── Academic_*.png
+├── *.xlsx
+├── code 2.R
+├── code 3.R
+├── code 4.R
+├── code 5.R
+├── code 6.R
+├── code 7.R
+├── code 8.R
+├── code 9.R
+└── README.md
+```
+
+The R scripts reproduce the statistical analyses and visual outputs presented in this repository.
+
+---
+
+# Scientific Significance
+
+The study demonstrates that Southeastern Türkiye is experiencing a combination of:
+
+**warming + increasing PET + increasing dryness + longer dry spells + increasing temperature-driven drought risk.**
+
+These changes are particularly important for:
+
+* water resources,
+* rain-fed agriculture,
+* drought monitoring,
+* regional climate adaptation,
+* and sustainable environmental planning.
+
+---
+
+# Author
+
+### Ahmet Solmaz
+
+This research project, including the **data processing, statistical analyses, methodological design, figures, Excel result files and scientific interpretation**, was independently designed and conducted by **Ahmet Solmaz**.
+
+The repository is presented as a reproducible research project in **hydroclimatology, climate variability, aridity and drought analysis**.
+
+---
+
+### Citation
+
+**Solmaz, A. (2026).** *Climatic Variability, Aridity and Drought Regime Changes in Southeastern Türkiye: A NASA POWER-Based Hydroclimatological Assessment (1991–2025).*
